@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Package, Star, ShoppingCart, Heart } from "lucide-react";
+import Link from "next/link";
 
 export default async function CategoryProductPage({
   params
@@ -62,9 +63,9 @@ export default async function CategoryProductPage({
       <section className="border-b bg-muted/30 py-4">
         <div className="container mx-auto px-4">
           <div className="flex items-center space-x-2 text-sm text-muted-foreground">
-            <a href="/" className="hover:text-primary transition-colors">Home</a>
+            <Link href="/" className="hover:text-primary transition-colors">Home</Link>
             <span>/</span>
-            <a href="/products" className="hover:text-primary transition-colors">Products</a>
+            <Link href="/products" className="hover:text-primary transition-colors">Products</Link>
             <span>/</span>
             <span className="hover:text-primary transition-colors capitalize">{decodedCategory}</span>
             <span>/</span>
@@ -77,10 +78,10 @@ export default async function CategoryProductPage({
       <section className="py-12">
         <div className="container mx-auto px-4">
           <Button variant="ghost" className="mb-6" asChild>
-            <a href="/products">
+            <Link href="/products">
               <ArrowLeft className="mr-2 h-4 w-4" />
               Back to Products
-            </a>
+            </Link>
           </Button>
 
           <div className="grid lg:grid-cols-2 gap-12">
@@ -206,7 +207,7 @@ export default async function CategoryProductPage({
                 </div>
               </div>
               <Button asChild>
-                <a href="/products">Browse All {mockProduct.category} Products</a>
+                <Link href="/products">Browse All {mockProduct.category} Products</Link>
               </Button>
             </CardContent>
           </Card>

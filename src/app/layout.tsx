@@ -3,12 +3,11 @@ import "./globals.css";
 import { Button } from "@/components/ui/button";
 import {
   NavigationMenu,
-  NavigationMenuContent,
   NavigationMenuItem,
   NavigationMenuLink,
   NavigationMenuList,
-  NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
+import Link from "next/link";
 
 export const metadata: Metadata = {
   title: "SwitchMart - Modern E-Commerce",
@@ -27,12 +26,12 @@ export default function RootLayout({
           <nav className="container mx-auto px-4">
             <div className="flex justify-between items-center h-16">
               <div className="flex items-center space-x-8">
-                <a
+                <Link
                   href="/"
                   className="text-2xl font-bold text-primary hover:text-primary/80 transition-colors"
                 >
                   SwitchMart
-                </a>
+                </Link>
                 <NavigationMenu className="hidden md:flex">
                   <NavigationMenuList>
                     <NavigationMenuItem>
@@ -80,10 +79,10 @@ export default function RootLayout({
               </div>
               <div className="flex items-center space-x-4">
                 <Button variant="ghost" asChild>
-                  <a href="/dashboard">Dashboard</a>
+                  <Link href="/dashboard">Dashboard</Link>
                 </Button>
                 <Button asChild>
-                  <a href="/admin">Admin</a>
+                  <Link href="/admin">Admin</Link>
                 </Button>
               </div>
             </div>

@@ -21,6 +21,7 @@ import {
   TrendingUp,
   Award
 } from "lucide-react";
+import Link from "next/link";
 
 export default function HomePage() {
   return (
@@ -55,16 +56,16 @@ export default function HomePage() {
 
               <div className="flex flex-col sm:flex-row gap-4">
                 <Button size="lg" className="h-12 px-8 text-base font-semibold shadow-lg hover:shadow-xl hover:shadow-blue-500/25 transition-all duration-300" asChild>
-                  <a href="/products">
+                  <Link href="/products">
                     <ShoppingBag className="mr-2 h-5 w-5" />
                     Shop Now
-                  </a>
+                  </Link>
                 </Button>
                 <Button variant="outline" size="lg" className="h-12 px-8 text-base font-semibold border-2 hover:bg-primary hover:text-primary-foreground transition-all duration-300" asChild>
-                  <a href="/about">
+                  <Link href="/about">
                     Learn More
                     <ArrowRight className="ml-2 h-5 w-5" />
-                  </a>
+                  </Link>
                 </Button>
               </div>
 
@@ -131,7 +132,7 @@ export default function HomePage() {
               </span>
             </h2>
             <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-              We've revolutionized online shopping with our innovative platform and exceptional service.
+              We&apos;ve revolutionized online shopping with our innovative platform and exceptional service.
             </p>
           </div>
 
@@ -239,13 +240,13 @@ export default function HomePage() {
 
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Button size="lg" className="h-12 px-8 text-base font-semibold shadow-lg hover:shadow-xl hover:shadow-blue-500/25 transition-all duration-300" asChild>
-                  <a href="/products">
+                  <Link href="/products">
                     Browse Products
                     <ArrowRight className="ml-2 h-5 w-5" />
-                  </a>
+                  </Link>
                 </Button>
                 <Button variant="outline" size="lg" className="h-12 px-8 text-base font-semibold border-2 hover:bg-primary hover:text-primary-foreground transition-all duration-300" asChild>
-                  <a href="/contact">Contact Us</a>
+                  <Link href="/contact">Contact Us</Link>
                 </Button>
               </div>
             </CardContent>
